@@ -3,4 +3,9 @@
 
 html {
     background-color: $app-background;
+    height: 100%;
+}
+
+.app-container {
+    height: 100vh;
 }
