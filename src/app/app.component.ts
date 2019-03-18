@@ -7,5 +7,5 @@ import { LayoutComponent } from './shared/layout/layout.component';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'best-app';
+  title = 'angular-material-app';
 }
