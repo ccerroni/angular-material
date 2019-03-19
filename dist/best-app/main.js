@@ -198,6 +198,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
 /* harmony import */ var _shared_navigation_sidenav_list_sidenav_list_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./shared/navigation/sidenav-list/sidenav-list.component */ "./src/app/shared/navigation/sidenav-list/sidenav-list.component.ts");
 /* harmony import */ var _account_account_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./account/account.component */ "./src/app/account/account.component.ts");
+/* harmony import */ var _authentication_authentication_module__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./authentication/authentication.module */ "./src/app/authentication/authentication.module.ts");
+
 
 
 
@@ -234,17 +236,147 @@ var AppModule = /** @class */ (function () {
                 _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatToolbarModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatIconModule"],
                 _angular_flex_layout__WEBPACK_IMPORTED_MODULE_10__["FlexLayoutModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatListModule"]
+                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatListModule"],
+                _authentication_authentication_module__WEBPACK_IMPORTED_MODULE_13__["AuthenticationModule"]
             ],
             exports: [
                 _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatToolbarModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatListModule"]
+                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatListModule"],
+                _authentication_authentication_module__WEBPACK_IMPORTED_MODULE_13__["AuthenticationModule"]
             ],
             providers: [],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/authentication/authentication-routing.module.ts":
+/*!*****************************************************************!*\
+  !*** ./src/app/authentication/authentication-routing.module.ts ***!
+  \*****************************************************************/
+/*! exports provided: AuthenticationRoutingModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthenticationRoutingModule", function() { return AuthenticationRoutingModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
+
+
+var routes = [];
+var AuthenticationRoutingModule = /** @class */ (function () {
+    function AuthenticationRoutingModule() {
+    }
+    AuthenticationRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forChild(routes)],
+            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
+        })
+    ], AuthenticationRoutingModule);
+    return AuthenticationRoutingModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/authentication/authentication.module.ts":
+/*!*********************************************************!*\
+  !*** ./src/app/authentication/authentication.module.ts ***!
+  \*********************************************************/
+/*! exports provided: AuthenticationModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthenticationModule", function() { return AuthenticationModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _authentication_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./authentication-routing.module */ "./src/app/authentication/authentication-routing.module.ts");
+/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./login/login.component */ "./src/app/authentication/login/login.component.ts");
+
+
+
+
+
+var AuthenticationModule = /** @class */ (function () {
+    function AuthenticationModule() {
+    }
+    AuthenticationModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            declarations: [_login_login_component__WEBPACK_IMPORTED_MODULE_4__["LoginComponent"]],
+            imports: [
+                _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
+                _authentication_routing_module__WEBPACK_IMPORTED_MODULE_3__["AuthenticationRoutingModule"]
+            ]
+        })
+    ], AuthenticationModule);
+    return AuthenticationModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/authentication/login/login.component.html":
+/*!***********************************************************!*\
+  !*** ./src/app/authentication/login/login.component.html ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  login works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/authentication/login/login.component.scss":
+/*!***********************************************************!*\
+  !*** ./src/app/authentication/login/login.component.scss ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2F1dGhlbnRpY2F0aW9uL2xvZ2luL2xvZ2luLmNvbXBvbmVudC5zY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/authentication/login/login.component.ts":
+/*!*********************************************************!*\
+  !*** ./src/app/authentication/login/login.component.ts ***!
+  \*********************************************************/
+/*! exports provided: LoginComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginComponent", function() { return LoginComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var LoginComponent = /** @class */ (function () {
+    function LoginComponent() {
+    }
+    LoginComponent.prototype.ngOnInit = function () {
+    };
+    LoginComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-login',
+            template: __webpack_require__(/*! ./login.component.html */ "./src/app/authentication/login/login.component.html"),
+            styles: [__webpack_require__(/*! ./login.component.scss */ "./src/app/authentication/login/login.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], LoginComponent);
+    return LoginComponent;
 }());
 
 

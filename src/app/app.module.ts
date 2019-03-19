@@ -11,6 +11,7 @@ import { HeaderComponent } from './shared/navigation/header/header.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SidenavListComponent } from './shared/navigation/sidenav-list/sidenav-list.component';
 import { AccountComponent } from './account/account.component';
+import { AuthenticationModule } from './authentication/authentication.module';
 
 
 @NgModule({
@@ -32,11 +33,13 @@ import { AccountComponent } from './account/account.component';
     MatToolbarModule,
     MatIconModule,
     FlexLayoutModule,
-    MatListModule 
+    MatListModule,
+    AuthenticationModule
   ],
   exports: [
     MatToolbarModule,
-    MatListModule 
+    MatListModule,
+    AuthenticationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
